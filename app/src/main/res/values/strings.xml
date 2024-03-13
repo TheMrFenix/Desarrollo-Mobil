@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">My App1</string>
-    <string name="hint_text_usuario">Usuario</string>
-    <string name="hint_text_password">Password</string>
-    <string name="hint_text_login">Login</string>
-</resources>
