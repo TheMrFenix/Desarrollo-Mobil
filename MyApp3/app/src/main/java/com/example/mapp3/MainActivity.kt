@@ -25,9 +25,38 @@ class MainActivity : AppCompatActivity() {
     //coleccion list
     var lista: List<Int> = listOf(1,2,3,4,5,6)
     var listamutable: MutableList<Int> = mutableListOf()
+
+    //coleccion Map
+    var refrescos: Map<Int,String> = mapOf(
+        1 to "Cocacola",
+        2 to "Fanta",
+        3 to "Pepsi"
+    )
+    var inversiones = mutableMapOf<String,Float>()
+
+    fun mostrarmutablemap(){
+        Log.w(tag,"mostrar mutable map")
+        inversiones.put("Pepsi",50F)
+        inversiones.put("Cocacola",250F)
+        inversiones.put("Fanta",150F)
+        for (i in inversiones){
+            Log.e(tag,i.toString())
+        }
+    }
+    fun mostrarmap(){
+        Log.w(tag,"Mostrar Map")
+        for (i in refrescos){
+            Log.e(tag,i.toString())
+        }
+    }
     fun mostrarMutableList(){
         Log.w(tag,"Mutable list")
-        listamutable.add(11)
+        listamutable.add(0,69)
+        listamutable.add(58)
+        listamutable.add(36)
+        for (i in listamutable){
+            Log.e(tag,i.toString())
+        }
     }
     fun mostrarList(){
         Log.w(tag,"mostrar List")
@@ -35,7 +64,6 @@ class MainActivity : AppCompatActivity() {
             Log.e(tag,i.toString())
         }
     }
-
     fun mostrarMutableSet(){
         clientes.add(3)
         clientes.add(6)
@@ -54,7 +82,6 @@ class MainActivity : AppCompatActivity() {
             Log.e(tag, "El cliente 1234 no esta en la lista")
         }
     }
-
     fun mostrarMatriz() {
         Log.w(tag, "mostrar matriz")
         for (i in (0 until matriz.size)) {
@@ -63,7 +90,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
     fun mostarVector() {
         //primera forma de for
         Log.w(tag, "primera forma For")
@@ -89,6 +115,9 @@ class MainActivity : AppCompatActivity() {
         //mostrarMatriz()
         //mostrarSet()
         //mostrarMutableSet()
-        mostrarList()
+        //mostrarList()
+        //mostrarMutableList()
+        //mostrarmap()
+        mostrarmutablemap()
     }
 }
