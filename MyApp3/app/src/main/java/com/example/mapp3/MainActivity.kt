@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    fun mostarVector() {
+    fun mostrarVector() {
         //primera forma de for
         Log.w(tag, "primera forma For")
         for (i in vect) {
@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //mostarVector()
+        //mostrarVector()
         //mostrarMatriz()
         //mostrarSet()
         //mostrarMutableSet()
