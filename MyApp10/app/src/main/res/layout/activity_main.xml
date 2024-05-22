@@ -38,8 +38,8 @@
         android:id="@+id/edit_TextNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
         android:text="Nombre del Trabajador 1:"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,6 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:onClick="Registro"
         android:text="Registrar"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,6 +63,7 @@
         android:layout_width="109dp"
         android:layout_height="58dp"
         android:layout_marginStart="36dp"
+        android:onClick="HorasTotales"
         android:text="Horas Totales"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -159,6 +161,7 @@
         android:layout_width="103dp"
         android:layout_height="58dp"
         android:layout_marginTop="16dp"
+        android:onClick="SueldoSemanal"
         android:text="Pago Semanal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.662"
@@ -179,6 +182,7 @@
         android:layout_width="110dp"
         android:layout_height="61dp"
         android:layout_marginStart="36dp"
+        android:onClick="PagoEmpresa"
         android:text="Pago Empresa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
@@ -197,6 +201,7 @@
         android:id="@+id/boton_MasHoras"
         android:layout_width="102dp"
         android:layout_height="60dp"
+        android:onClick="MasHoras"
         android:text="Mayor Horas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.648"
@@ -214,6 +219,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/boton_Registrar"
         app:layout_constraintVertical_bias="0.762" />
+
+    <Button
+        android:id="@+id/boton_Pasar"
+        android:layout_width="97dp"
+        android:layout_height="55dp"
+        android:onClick="Pasar"
+        android:text="Pasar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edit_TextDia"
+        app:layout_constraintTop_toBottomOf="@+id/ingreso_Nombre" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -17,11 +17,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var resultado:TextView
     var dias= listOf<String>("Lunes","Martes","Miercoles","Jueves","Viernes","Sabado")
     var nombret1 = ""
-    var horat1 = mutableListOf<Int>(1,2,3,4,5,6)
-    var pagot1 = mutableListOf<Float>(1f,2f,3f,4f,5f,6f)
+    var horat1 = mutableListOf<Int>()
+    var pagot1 = mutableListOf<Float>()
     var nombret2 = ""
-    var horat2 = mutableListOf<Int>(1,2,3,4,5,6)
-    var pagot2 = mutableListOf<Float>(1f,2f,3f,4f,5f,6f)
+    var horat2 = mutableListOf<Int>(0,2,3,4,5,6)
+    var pagot2 = mutableListOf<Float>(0f,2f,3f,4f,5f,6f)
+    var paso=1
     private var cambio=false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +33,9 @@ class MainActivity : AppCompatActivity() {
         hora=findViewById(R.id.ingreso_Hora)
         pago=findViewById(R.id.ingreso_Pago)
         resultado=findViewById(R.id.edit_Resultado)
+    }
+    fun Pasar(view: View){
+        paso=paso+1
     }
     fun Registro(view: View){
         val valor1=nombre.text.toString()
@@ -46,15 +50,16 @@ class MainActivity : AppCompatActivity() {
             if (valor2!=""&&valor3!=""){
                 val num1=valor2.toInt()
                 val num2=valor3.toFloat()
-                for (i in horat1){
-                    dia.text=dias[i]
-                    horat1.add(i,num1)
-                    pagot1.add(i,num2)
-                }
-                cambio=true
-                dia.text="Lunes"
+                dia.text=dias[paso]
+                horat1.add(paso,num1)
+                pagot1.add(paso,num2)
             }else{
                 Toast.makeText(this, "Ingrese todos los Valores", Toast.LENGTH_SHORT).show()
+            }
+            if (paso==6){
+                cambio=true
+                paso=1
+                dia.text=dias[paso]
             }
         }else{
             if (valor1!=""){
@@ -125,5 +130,17 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Ingrese todos los Valores", Toast.LENGTH_SHORT).show()
         }
     }
-    fun
+    fun MasHoras(view: View){
+        val valor1=horat1.get(1)
+        val valor2=horat2.get(1)
+        if(valor1>valor2){
+            resultado.text="El Trabajador con mas horas laburadas el lunes es:$nombret1"
+        } else if (valor1<valor2){
+            resultado.text="El trabajador con mas horas laburadas el lunes es:$nombret2"
+        } else if (valor1==valor2){
+            resultado.text="Ambos trabajadores laburaron la misma cantidad de horas"
+        } else {
+            Toast.makeText(this, "Ingrese todos los Valores", Toast.LENGTH_SHORT).show()
+        }
+    }
 }
