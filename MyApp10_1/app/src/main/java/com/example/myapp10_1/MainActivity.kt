@@ -118,16 +118,76 @@ class MainActivity : AppCompatActivity() {
         val valor12=pago4t2.text.toString()
         val valor13=pago5t2.text.toString()
         val valor14=pago6t2.text.toString()
-        if (valor1!=""&&valor2!=""&&valor3!=""&&valor4!=""&&valor5!=""&&valor6!=""&&valor1!=""&&valor1!=""&&valor1!=""&&valor1!=""&&valor1!=""&&valor1!=""&&valor1!=""){
-            var sum1=0f
-            for (i in pagot1){
-                sum1+=pagot1.get(i.toInt())
+        if (valor1!=""&&valor2!=""&&valor3!=""&&valor4!=""&&valor5!=""&&valor6!=""&&valor7!=""&&valor8!=""&&valor9!=""&&valor10!=""&&valor11!=""&&valor12!=""&&valor13!=""&&valor14!=""){
+            var nom1=valor1.toString()
+            var nom2=valor2.toString()
+            var num1=valor3.toDouble()
+            var num2=valor4.toDouble()
+            var num3=valor5.toDouble()
+            var num4=valor6.toDouble()
+            var num5=valor7.toDouble()
+            var num6=valor8.toDouble()
+            var num7=valor9.toDouble()
+            var num8=valor10.toDouble()
+            var num9=valor11.toDouble()
+            var num10=valor12.toDouble()
+            var num11=valor13.toDouble()
+            var num12=valor14.toDouble()
+            var sum1=num1+num2+num3+num4+num5+num6
+            var sum2=num7+num8+num9+num10+num11+num12
+            Respuesta.text="El sueldo semanal del Trabajador: $nom1 es de $sum1 Bs y del Trabajador: $nom2 es de $sum2 Bs"
+        }else{
+            Toast.makeText(this, "Ingrese todos los Valores", Toast.LENGTH_SHORT).show()
+        }
+    }
+    fun pagoEmpresa(view: View){
+        val valor1=pago1t1.text.toString()
+        val valor2=pago2t1.text.toString()
+        val valor3=pago3t1.text.toString()
+        val valor4=pago4t1.text.toString()
+        val valor5=pago5t1.text.toString()
+        val valor6=pago6t1.text.toString()
+        val valor7=pago1t2.text.toString()
+        val valor8=pago2t2.text.toString()
+        val valor9=pago3t2.text.toString()
+        val valor10=pago4t2.text.toString()
+        val valor11=pago5t2.text.toString()
+        val valor12=pago6t2.text.toString()
+        if (valor1!=""&&valor2!=""&&valor3!=""&&valor4!=""&&valor5!=""&&valor6!=""&&valor7!=""&&valor8!=""&&valor9!=""&&valor10!=""&&valor11!=""&&valor12!="") {
+            var num1=valor1.toDouble()
+            var num2=valor2.toDouble()
+            var num3=valor3.toDouble()
+            var num4=valor4.toDouble()
+            var num5=valor5.toDouble()
+            var num6=valor6.toDouble()
+            var num7=valor7.toDouble()
+            var num8=valor8.toDouble()
+            var num9=valor9.toDouble()
+            var num10=valor10.toDouble()
+            var num11=valor11.toDouble()
+            var num12=valor12.toDouble()
+            var sum=num1+num2+num3+num4+num5+num6+num7+num8+num9+num10+num11+num12
+            Respuesta.text="El pago total que debe hacer la empresa a los trabajadores en una semana es: $sum Bs"
+        }else{
+            Toast.makeText(this, "Ingrese todos los Valores", Toast.LENGTH_SHORT).show()
+        }
+    }
+    fun masHoras(view: View){
+        val valor1=nombret1.text.toString()
+        val valor2=nombret2.text.toString()
+        val valor3=hora1t1.text.toString()
+        val valor4=hora1t2.text.toString()
+        if (valor1!=""&&valor2!=""&&valor3!=""&&valor4!="") {
+            var nom1 = valor1.toString()
+            var nom2 = valor2.toString()
+            var num1 = valor3.toInt()
+            var num2 = valor4.toInt()
+            if (num1>num2){
+                Respuesta.text="El trabajador que laburo mas horas el lunes fue $nom1 con $num1 horas"
             }
-            var sum2=0f
-            for (j in pagot2){
-                sum2+=pagot2.get(j.toInt())
+            if (num2>num1){
+                Respuesta.text="El trabajador que laburo mas horas el lunes fue $nom2 con $num2 horas"
             }
-            resultado.text="El sueldo semanal de:$nombret1 es $sum1 y de:$nombret2 es $sum2"
         }else{
             Toast.makeText(this, "Ingrese todos los Valores", Toast.LENGTH_SHORT).show()
         }

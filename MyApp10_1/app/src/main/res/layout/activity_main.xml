@@ -418,6 +418,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="60dp"
+        android:onClick="horasTotales"
         android:text="Horas Totales"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -428,6 +429,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="56dp"
+        android:onClick="sueldoSemanal"
         android:text="Sueldo Semanal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/boton_totalhoras" />
@@ -438,6 +440,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="68dp"
+        android:onClick="pagoEmpresa"
         android:text="Pago Empresa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/boton_sueldosemanal" />
@@ -448,6 +451,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="84dp"
+        android:onClick="masHoras"
         android:text="Mas Horas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/boton_pagoempresa" />
